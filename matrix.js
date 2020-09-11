@@ -11,6 +11,9 @@
  *
  */
 
-const absoluteSumMatrix = matrix => {}
+const absoluteSumMatrix = matrix => {
+  let sumResult = matrix.reduce((sum, arr, idx) => sum + arr[idx] + arr[arr.length - 1 - idx], 0);
+  return Math.abs(sumResult);
+}
 
 module.exports = absoluteSumMatrix
